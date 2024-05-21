@@ -5,7 +5,9 @@ function getFileIdByRollno(rollNo) {
   if (!Array.isArray(fileDataList)) {
     return null;
   }
-  return fileDataList.find((fileData) => fileData.fileNumber === rollNo);
+  return fileDataList.find(
+    (fileData) => fileData.fileNumber === String(rollNo)
+  );
 }
 
 module.exports = { getFileIdByRollno };

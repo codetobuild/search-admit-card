@@ -23,7 +23,8 @@ app.get(
       const paramRollno = req.params.rollNo;
       const rollNoInteger = parseInt(paramRollno, 10);
       const fileData = getFileIdByRollno(rollNoInteger);
-      // console.log(fileData);
+      console.log(rollNoInteger);
+      console.log(fileData);
       if (!fileData) {
         return res.status(404).json({
           message: "admit card not found for the roll no: " + rollNoInteger,
