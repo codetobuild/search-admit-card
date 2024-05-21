@@ -152,3 +152,13 @@ document
       window.open(OFFICIAL_WEBSITE_URL, "_blank"); // Open link in new tab
     }
   });
+
+document
+  .getElementById("downloadLink")
+  .addEventListener("click", function (event) {
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      event.preventDefault();
+      const downloadUrl = this.getAttribute("href");
+      window.open(downloadUrl, "_blank");
+    }
+  });

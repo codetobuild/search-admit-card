@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,26 +20,29 @@
         <h1 class="headerTitle text-center">SDZO ADMIT CARD</h1>
     </header>
     <section class="container inputSection">
-        <label for="rollnoInput" class="inputLabel">Enter Your Roll No</label>
-        <input type="number" id="rollnoInput" class="rollnoInput" tabindex="1" min="1" max="999" />
+        <label for="rollnoInput" class="inputLabel">Your Roll No</label>
+        <input type="number" id="rollnoInput" class="rollnoInput" tabindex="1" min="1" max="999"
+            placeholder="Enter roll no..." />
         <button id="searchAdmitBtn" class="btn icon-btn"><i class="fa fa-search"></i> Search Admit Card</button>
     </section>
 
-    <section class="container resultSection">
-        <div class="messageContainer">
-            <p class="primary message">Download Your SZDO Exam Admit Card </p>
-            <p class="secondary message"></p>
-        </div>
-        <div class="downloadBtnContainer">
-            <a id="viewLink" href="" target="_blank" rel="noopener noreferrer">
-                <button class="btn viewBtn"><i class="fa fa-eye"></i> View</button>
-            </a>
-            <a id="downloadLink" download="" href="" rel="noopener noreferrer">
-                <button class="btn downloadBtn"><i class="fa fa-download"></i> Download</button>
-            </a>
-        </div>
-        <div id="resultSectionImg">
-            <img src="./images/no-result.png" class="no-result-img" />
+    <section class="section-margin">
+        <div class="container resultSection">
+            <div class="messageContainer">
+                <p class="primary message">Download Your SZDO Exam Admit Card </p>
+                <p class="secondary message"></p>
+            </div>
+            <div class="downloadBtnContainer">
+                <a id="viewLink" href="" target="_blank" rel="noopener noreferrer">
+                    <button class="btn viewBtn"><i class="fa fa-eye"></i> View</button>
+                </a>
+                <a id="downloadLink" download="" href="" rel="noopener noreferrer">
+                    <button class="btn downloadBtn"><i class="fa fa-download"></i> Download</button>
+                </a>
+            </div>
+            <div id="resultSectionImg">
+                <img src="./images/no-result.png" class="no-result-img" />
+            </div>
         </div>
     </section>
 
@@ -50,22 +54,26 @@
         </div>
     </div>
 
-    <div class="footerWrapper">
+    <div class="section-margin">
         <footer class="container">
-            <p class="footer_text_1">This website is not an official site. We recommend downloading your admit card here
-                for
-                quick and easy access.
-                <br /> Please be aware that we are not responsible for any issues or errors related to
-                the
-                admit card.
+            <p class="footer_text_1">This is not an official site. We created this platform to help you in
+                checking
+                and downloading your admit card with ease.
+                We are not responsible for any issues or errors related to
+                the admit card.
             </p>
-            <p> However, the official website ( <a id="officialSiteLink" href="#">https://ttaadc.gov.in </a>) also
+            <p class=""> You can also refer the official website ( <a id="officialSiteLink"
+                    href="#">https://ttaadc.gov.in </a>)
+                also
                 provides
                 a download option.
             </p>
-            <p>Please support us by sharing this website link. 😊</p>
-            <p class="copyright_text text-center">Designed & Developed by Nokha Debbarma.</p>
-            <p class="copyright_text text-center">Copyright &copy; 2024 All Rights Reserved.</p>
+            <p class="text-center" style="margin-top:10px; margin-bottom:10px">Please support us by sharing this website
+                link. 😊</p>
+            <div class="copyrightContainer">
+                <p class="developer_text text-center">Designed & Developed by Nokha Debbarma.</p>
+                <p class="copyright_text text-center">Copyright &copy; 2024 All Rights Reserved.</p>
+            </div>
         </footer>
     </div>
 
