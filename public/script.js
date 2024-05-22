@@ -3,6 +3,30 @@ const rollnoInput = document.getElementById("rollnoInput");
 
 const ONLINE_STATUS = false;
 // script.js
+
+document.addEventListener("DOMContentLoaded", async function () {
+  // Code to execute after HTML and JavaScript are fully loaded
+  await fetchAndRenderVisitorcount();
+});
+async function fetchAndRenderVisitorcount() {
+  try {
+    const response = await fetch("/api/v1/visitor-count");
+    if (response.ok) {
+      const data = await response.json();
+      if (data?.visitorCount) {
+        const visitorCountValueElem =
+          document.getElementById("visitorCountValue");
+        function roundToNext10(number) {
+          return Math.ceil(number / 10) * 10;
+        }
+        const count = roundToNext10(data.visitorCount);
+        visitorCountValueElem.innerText = String(count) + "+";
+      }
+    }
+  } catch (err) {
+    console.log("error fetching visitor", err);
+  }
+}
 document
   .getElementById("searchAdmitBtn")
   .addEventListener("click", async () => {
@@ -50,10 +74,10 @@ document
         if (data?.visitorCount) {
           const visitorCountValueElem =
             document.getElementById("visitorCountValue");
-          function roundToNext100(number) {
-            return Math.ceil(number / 100) * 100;
+          function roundToNext10(number) {
+            return Math.ceil(number / 10) * 10;
           }
-          const count = roundToNext100(data.visitorCount);
+          const count = roundToNext10(data.visitorCount);
           visitorCountValueElem.innerText = String(count) + "+";
         }
 

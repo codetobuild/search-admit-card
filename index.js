@@ -43,6 +43,13 @@ app.get(
   }
 );
 
+app.get("/api/v1/visitor-count", (req, res) => {
+  if (req.visitorCount) {
+    return res.json({ visitorCount: req.visitorCount });
+  } else {
+    return res.status(404).json({ error: "Not Found" });
+  }
+});
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
