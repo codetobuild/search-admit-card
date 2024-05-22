@@ -183,7 +183,6 @@ a {
 .resultSection {
   padding: 10px;
   align-items: center;
-  background: rgb(218, 255, 233);
   background: linear-gradient(
     167deg,
     rgb(179, 255, 247) 0%,
@@ -207,6 +206,7 @@ a {
 }
 .primary {
   font-weight: 600;
+  padding-top: 20px;
 }
 footer {
   padding: 25px;
@@ -246,5 +246,11 @@ footer p {
   }
   .headerTitle {
     font-size: 23px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #rollnoInput {
+    background-color: white;
   }
 }
