@@ -10,6 +10,7 @@ const {
 
 const app = express();
 
+app.set("trust proxy", true);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(visitorTracker);
 
