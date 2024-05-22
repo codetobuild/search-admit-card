@@ -237,6 +237,14 @@ footer p {
   font-size: 14px;
   margin-bottom: 8px;
 }
+
+#visitorCount {
+  font-size: 16px;
+}
+#visitorCountValue {
+  font-size: 16px;
+  font-weight: 600;
+}
 @media (max-width: 456px) {
   .rollnoInput {
     font-size: 24px;

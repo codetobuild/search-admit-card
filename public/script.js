@@ -29,7 +29,7 @@ document
       console.log("response status", response.status);
       if (response.ok) {
         const data = await response.json();
-        // console.log("data", data);
+        console.log("data", data);
 
         if (!data?.fileData) {
           throw new Error("An error occurred while processing your request");
@@ -46,6 +46,16 @@ document
         downloadLinkElem.download = filename;
 
         viewLinkElem.href = viewUrl;
+
+        if (data?.visitorCount) {
+          const visitorCountValueElem =
+            document.getElementById("visitorCountValue");
+          function roundToNext100(number) {
+            return Math.ceil(number / 100) * 100;
+          }
+          const count = roundToNext100(data.visitorCount);
+          visitorCountValueElem.innerText = String(count) + "+";
+        }
 
         showAdmitFoundSuccess();
         showDownloadButton();
@@ -69,6 +79,7 @@ document
       resetRollInput();
     }
   });
+
 function resetRollInput() {
   rollnoInput.value = "";
 }
